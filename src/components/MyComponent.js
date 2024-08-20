@@ -2,12 +2,17 @@ import React from "react";
 
 class MyComponent extends React.Component { // ke thua lai tinh nang component cua react
     //JSX: cho phep viet code JS trong HTML
-    render() {
-        return(
-            <div>
-                My first Component
 
-                {Math.random()}
+    state = {
+        name: 'Quang',
+        age: 21,
+        address: 'Ha Noi'
+    };
+
+    render() {
+        return (
+            <div>
+                My name is {this.state.name} and I'm from {this.state.address}
             </div>
         );
     }
