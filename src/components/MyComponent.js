@@ -9,10 +9,25 @@ class MyComponent extends React.Component { // ke thua lai tinh nang component c
         address: 'Ha Noi'
     };
 
+    handleClick(event) {
+        console.log('>>> Click me');
+        // merger state chi trong react class
+        this.setState({
+            name: 'Minh Quang',
+            age: Math.floor((Math.random() * 100) + 1)
+        })
+    }
+
+    handleOnMoverOver(event) {
+        // console.log(event.pageX);
+    }
+
     render() {
         return (
             <div>
-                My name is {this.state.name} and I'm from {this.state.address}
+                My name is {this.state.name} and I'm  {this.state.age}
+                <button onMouseOver={this.handleOnMoverOver}>Hover me</button>
+                <button onClick={(event) => { this.handleClick(event) }}>Click me</button>
             </div>
         );
     }
