@@ -4,18 +4,28 @@ import DisplayInfor from "./DisplayInfor";
 
 class MyComponent extends React.Component { // ke thua lai tinh nang component cua react
     //JSX: cho phep viet code JS trong HTML
+    //DRY: don't repeat yourself
+
+    state = {
+        listUsers: [
+            { id: 1, name: "Quang", age: '30' },
+            { id: 2, name: "Minh", age: '21' },
+            { id: 3, name: "Doan", age: '22' }
+        ]
+    }
 
 
     render() {
-        const myInfor = ['ab', 'c'];
         return (
             <div>
                 <UserInfor />
                 <br></br>
                 {/* Truyen props: name , value xuong cho components DisplayInfor */}
-                <DisplayInfor name="Quang" age='30' />
-                <hr></hr>
-                <DisplayInfor name="Minh" age={21} myInfor={myInfor} />
+                <DisplayInfor
+                    listUsers={this.state.listUsers}
+                    users={this.state.listUsers}
+                />
+
             </div>
         );
     }
