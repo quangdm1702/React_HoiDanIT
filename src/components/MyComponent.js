@@ -23,17 +23,19 @@ class MyComponent extends React.Component { // ke thua lai tinh nang component c
 
     render() {
         return (
-            <div>
-                <AddUserInfor
-                    handleAddNewUser={this.handleAddNewUser}
+            <>
+                <div>
+                    <AddUserInfor
+                        handleAddNewUser={this.handleAddNewUser}
 
-                />
-                <br></br>
-                {/* Truyen props: name , value xuong cho components DisplayInfor */}
-                <DisplayInfor
-                    listUsers={this.state.listUsers}
-                />
-            </div>
+                    />
+                    <br></br>
+                    {/* Truyen props: name , value xuong cho components DisplayInfor */}
+                    <DisplayInfor
+                        listUsers={this.state.listUsers}
+                    />
+                </div>
+            </>
         );
     }
 }
