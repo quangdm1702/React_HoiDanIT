@@ -8,7 +8,7 @@ class MyComponent extends React.Component { // ke thua lai tinh nang component c
 
     state = {
         listUsers: [
-            { id: 1, name: "Quang", age: '30' },
+            { id: 1, name: "Quang", age: '16' },
             { id: 2, name: "Minh", age: '21' },
             { id: 3, name: "Doan", age: '22' }
         ]
@@ -23,9 +23,7 @@ class MyComponent extends React.Component { // ke thua lai tinh nang component c
                 {/* Truyen props: name , value xuong cho components DisplayInfor */}
                 <DisplayInfor
                     listUsers={this.state.listUsers}
-                    users={this.state.listUsers}
                 />
-
             </div>
         );
     }
