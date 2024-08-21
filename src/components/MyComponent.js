@@ -20,6 +20,14 @@ class MyComponent extends React.Component { // ke thua lai tinh nang component c
         })
     }
 
+    handleDeleteUser = (userId) => {
+        let listUsersClone = this.state.listUsers;
+        listUsersClone = listUsersClone.filter((item) => item.id !== userId); // loc user theo id
+        this.setState({
+            listUsers: listUsersClone
+        })
+    }
+
 
     render() {
         return (
@@ -33,6 +41,7 @@ class MyComponent extends React.Component { // ke thua lai tinh nang component c
                     {/* Truyen props: name , value xuong cho components DisplayInfor */}
                     <DisplayInfor
                         listUsers={this.state.listUsers}
+                        handleDeleteUser={this.handleDeleteUser}
                     />
                 </div>
             </>
