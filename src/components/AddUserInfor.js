@@ -54,8 +54,6 @@ import React, { useState } from "react";
 
 const AddUserInfor = (props) => {
 
-    const { handleAddNewUser } = props;
-
     const [name, setName] = useState('');// khoi tao gia tri ban dau cho name = ''
     const [address, setAddress] = useState('Ha Noi'); // khoi tao gia tri ban dau cho address = HN
     const [age, setAge] = useState('');// khoi tao gia tri ban dau cho age = ''
@@ -69,7 +67,7 @@ const AddUserInfor = (props) => {
     }
 
     const handleOnSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault();// ngan viec submit form load lai trang
         props.handleAddNewUser({
             id: Math.floor((Math.random() * 100) + 1) + '-random',
             name: name,
